@@ -1,0 +1,50 @@
+const express = require("express");
+const router = express.Router();
+const User = require("../models/User");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+// LOGIN
+router.post("/login", async (req, res) => {
+  try {
+    console.log("LOGIN BODY:", req.body); // ✅ ADD
+
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email });
+    console.log("USER FOUND:", user); // ✅ ADD
+
+    if (!user) {
+      return res.status(400).json({ message: "User not found" });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log("PASSWORD MATCH:", isMatch); // ✅ ADD
+
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: "1d" }
+    );
+
+    res.json({
+      token,
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+    });
+
+  } catch (err) {
+    console.log("LOGIN ERROR:", err); // ✅ ADD
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+module.exports = router;
