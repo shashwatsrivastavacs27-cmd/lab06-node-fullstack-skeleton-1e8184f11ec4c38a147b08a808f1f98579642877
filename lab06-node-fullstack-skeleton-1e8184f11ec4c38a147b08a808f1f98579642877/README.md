@@ -4,9 +4,6 @@
 Name: Shashwat Srivastava  
 Enrollment: CS-2341584
 Section: 3CSE15  
-
----
-
 ## 📌 Overview
 This project extends Lab 06 by implementing authentication and Role-Based Access Control (RBAC) in a fullstack application.
 
@@ -16,9 +13,6 @@ The system supports three roles:
 - SUPER_ADMIN
 
 Each role has different permissions enforced using backend middleware and frontend UI rendering.
-
----
-
 ## 📂 Project Structure
 
 lab06-node-fullstack-skeleton  
@@ -26,9 +20,6 @@ lab06-node-fullstack-skeleton
 ├── backend  
 ├── frontend  
 └── README.md  
-
----
-
 ## 🛠️ Technologies Used
 - Node.js
 - Express.js
@@ -38,9 +29,6 @@ lab06-node-fullstack-skeleton
 - JWT (Authentication)
 - bcrypt (Password hashing)
 - Git & GitHub
-
----
-
 ## ⚙️ How to Run Backend
 
 cd backend  
@@ -49,28 +37,16 @@ npm start
 
 Runs on:  
 http://localhost:3000  
-
----
-
 ## ⚙️ How to Run Frontend
-
 cd frontend  
 npm install  
 npm start  
-
 Runs on:  
 http://localhost:3001  
-
----
-
 ## 🔐 Test Account
-
 ### SUPER_ADMIN
 Email: superadmin@test.com  
 Password: 123456  
-
----
-
 ## 🧪 API Routes
 
 ### Authentication
@@ -84,10 +60,7 @@ Password: 123456
 - PATCH /api/users/:id/role  
 - DELETE /api/users/:id  
 
----
-
 ## 🔒 RBAC Rules
-
 - USER:
   - Can view own profile only  
 
@@ -100,33 +73,18 @@ Password: 123456
   - Full access  
   - Can change roles  
 
----
-
 ## 🗄️ Database
-
 MongoDB Atlas used  
 Database name: lab6db  
-
----
-
 ## 📷 Screenshots
-
 Refer to Lab 07 Report PDF for:
 - API Testing (Postman / Thunder Client)  
 - RBAC Proof (403 Forbidden cases)  
 - UI Screenshots (Login + Dashboards)  
-
----
-
 ## 📚 Notes
-
 - All protected routes require JWT token  
 - Unauthorized → 401  
 - Forbidden → 403  
 - Passwords are stored using bcrypt hashing  
-
----
-
 ## 🔗 Repository
-
-https://github.com/aksha-t022/lab06-node-fullstack-skeleton
+https://github.com/shashwatsrivastavacs27-cmd/lab06-node-fullstack-skeleton-1e8184f11ec4c38a147b08a808f1f98579642877/edit/main/lab06-node-fullstack-skeleton-1e8184f11ec4c38a147b08a808f1f98579642877/README.md
