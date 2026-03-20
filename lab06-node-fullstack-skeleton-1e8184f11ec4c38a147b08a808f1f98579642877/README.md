@@ -1,8 +1,8 @@
 # Lab 07 - Multi-Role User System (RBAC)
 
 ## 👨‍🎓 Student Details
-Name: Akshat  
-Enrollment: CS-23411015  
+Name: Shashwat Srivastava  
+Enrollment: CS-2341584
 Section: 3CSE15  
 
 ---
